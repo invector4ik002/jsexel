@@ -1,0 +1,29 @@
+{
+  "name": "jsexel",
+  "version": "1.0.0",
+  "description": "jsexcel",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack",
+    "build": "webpack --mode production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/invector4ik002/jsexel.git"
+  },
+  "keywords": [
+    "js",
+    "excel"
+  ],
+  "author": "md",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/invector4ik002/jsexel/issues"
+  },
+  "homepage": "https://github.com/invector4ik002/jsexel#readme",
+  "devDependencies": {
+    "webpack": "^5.11.1",
+    "webpack-cli": "^4.3.1"
+  }
+}
