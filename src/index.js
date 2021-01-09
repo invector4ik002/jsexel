@@ -1,2 +1,2 @@
-import './dfsdfsdf'
+import './module'
 console.trace('work!');
