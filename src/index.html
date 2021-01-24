@@ -3,9 +3,26 @@
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link href="https://fonts.googleapis.com/css2?family=Material+Icons"
+      rel="stylesheet">
    <title>jsexcel</title>
 </head>
 <body>
-   <div id='app' ></div>
+   <div id='app' class="container">
+      <div class="excel">
+         <div class="excel__headeer">
+            <input type="text" class="input" value="Новая таблица" >
+            <button class="button">
+               <i class="material-icons">delete</i>
+            </button>
+            <button class="button">
+               <i class="material-icons">exit_to_app</i>
+            </button>
+         </div>
+         <div class="excel__toolbar"></div>
+         <div class="excel__formula"></div>
+         <div class="excel__table"></div>
+      </div>
+   </div>
 </body>
 </html>

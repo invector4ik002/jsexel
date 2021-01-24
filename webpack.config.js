@@ -2,7 +2,7 @@ const path = require('path');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const  HtMLWebpackPlugin  = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const { cli } = require('webpack');
+// const { cli } = require('webpack');
 // const CopyPlugin = require("copy-webpack-plugin");
 const isProd = process.env.NODE_ENV === 'production';
 const isDev = !isProd;
@@ -14,7 +14,7 @@ const filename = ext => isDev ? `bundle.${ext}` : `bundle.[hash].${ext}`;
 module.exports = {
    context: path.resolve(__dirname, 'src'),
    mode: 'development',
-   entry: './index.js',
+   entry: ['@bael/polyfill','./index.js'],
    output: {
       filename: filename('js'),
       path: path.resolve(__dirname, 'dist')
@@ -27,10 +27,10 @@ module.exports = {
       }
    },
    devtool: isDev ? 'source-map' : false,
-   devServer: {
-      port: 5000,
-      hot: isDev
-   },
+   // devServer: {
+   //    port: 3000,
+   //    hot: isDev
+   // },
    plugins: [
       new CleanWebpackPlugin(),
       new HtMLWebpackPlugin({
@@ -62,15 +62,14 @@ module.exports = {
          },
          {
             
-               test: /\.m?js$/,
-               exclude: /node_modules/,
-               use: {
-                 loader: "babel-loader",
-                 options: {
-                   presets: ['@babel/preset-env']
-                 }
-               }
-             
+            test: /\.m?js$/,
+            exclude: /node_modules/,
+            use: {
+              loader: "babel-loader",
+              options: {
+                presets: ['@babel/preset-env']
+              }
+            }  
          }
       ]
    },
