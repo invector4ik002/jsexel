@@ -4,5 +4,21 @@
 // outline: 1px solid blue;
 
 .excel__toolbar{
-   // outline: 1px solid blue;
+
+   padding: 10px;
+   position: absolute;
+   // background:green;
+   top: 40px; 
+   left: 0px; 
+   right:0px;
+   // height: $toolbar-height; 
+   border-top: 1px solid $border-color;
+   border-bottom: 1px solid $border-color;
+   display: flex;
+   flex-direction: row;
+   justify-content: space-around;
+   padding: 8px 4px 8px 4px;
+   .button {
+      @include button(darkmagenta);
+   }
 }

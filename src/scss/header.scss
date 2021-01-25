@@ -7,8 +7,8 @@
   top: 0;
   right: 0;
   left: 0;
-  height: $header-height;
-  padding: 8px 4px 0;
+//   height: $header-height;
+  padding: 8px 4px 8px 4px;
   display: flex;
   justify-content: space-between;
    & .input {
@@ -29,9 +29,9 @@
       &:focus {
          border: 2px solid blue;
       }
-      
    }
    .button {
-      @include button(red)
+      @include button(darkmagenta);
+      margin: 0 0 0 5px;
    }
 }
